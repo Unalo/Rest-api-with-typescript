@@ -8,7 +8,7 @@ const port = config.get<number>('port');
 
 const app = express();
 
-app.listen(port, async() => {
+app.listen(port, async () => {
     console.log("API ạpp started on port " + port);
     await connect();
     routes(app);
