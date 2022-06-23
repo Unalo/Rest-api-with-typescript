@@ -28,6 +28,7 @@
     "latest": "^0.2.0",
     "lodash": "^4.17.21",
     "mongoose": "^6.4.0",
+    "mongoose-type-email": "^1.1.2",
     "nanoid": "^4.0.0",
     "pino": "^8.0.0",
     "pino-pretty": "^8.0.0",

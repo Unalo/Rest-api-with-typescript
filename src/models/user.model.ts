@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import config from 'config';
 import { boolean, string } from 'zod';
+require('mongoose-type-email');
 
 export interface UserDocument extends mongoose.Document {
     email: string;
@@ -9,11 +10,12 @@ export interface UserDocument extends mongoose.Document {
     password: string;
     createdAt: Date;
     updatedAt: Date;
+    comparePassword(candidatePassword: string): Promise<boolean>
 }
 
 // schema definition
 const userSchema = new mongoose.Schema({
-    email: { type: string, required: true, unique: true },
+    email: { type: mongoose.SchemaTypes.Email, required: true, unique: true },
     name: { type: string, required: true },
     password: { type: string, required: true }
 }, {
