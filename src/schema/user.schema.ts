@@ -20,4 +20,4 @@ export const createUserSchema = Object({
     })
 })
 
-export type creaUserInput = Omit < TypeOf<typeof createUserSchema>, "body.passwordCornform">;
+export type creaUserInput = Omit<TypeOf<typeof createUserSchema>, "body.passwordCornform">;
